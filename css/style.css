@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --blue: #07579b;
+  --blue-dark: #063b70;
+  --blue-light: #e8f3fc;
+  --ink: #142b40;
+  --muted: #64788b;
+  --white: #fff;
+  --page: #f4f8fc;
+}
+
+* { box-sizing: border-box; }
+html { min-height: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--ink);
+  background: radial-gradient(circle at 78% 18%, #e2f1fd 0, transparent 32%), var(--page);
+  font-family: "DM Sans", Arial, sans-serif;
+}
+button { font: inherit; }
+.experience-shell {
+  width: min(100%, 1920px);
+  min-height: 100vh;
+  margin: 0 auto;
+  padding: 0 clamp(28px, 6vw, 112px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.topbar {
+  height: 104px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(7,87,155,.12);
+}
+.brand { display: inline-flex; align-items: center; gap: 12px; color: var(--blue); text-decoration: none; }
+.brand-mark {
+  width: 45px; height: 45px; display: grid; place-items: center;
+  border-radius: 12px 12px 12px 3px; background: var(--blue); color: white;
+  font: 800 27px "Manrope", sans-serif;
+}
+.brand-copy { display: flex; flex-direction: column; line-height: 1.05; letter-spacing: .08em; }
+.brand-copy strong { font: 800 20px "Manrope", sans-serif; }
+.brand-copy small { margin-top: 5px; font-size: 9px; font-weight: 700; letter-spacing: .19em; }
+.topbar-tag { color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .16em; display: flex; align-items: center; gap: 9px; }
+.live-dot { width: 8px; height: 8px; background: #27b47e; border-radius: 50%; box-shadow: 0 0 0 5px rgba(39,180,126,.12); }
+
+.course-layout {
+  min-height: 610px;
+  padding: clamp(46px, 6vh, 88px) 0 54px;
+  display: grid;
+  grid-template-columns: 1.02fr .98fr;
+  align-items: center;
+  gap: clamp(45px, 7vw, 120px);
+}
+.course-copy { max-width: 690px; }
+.eyebrow { color: var(--blue); font-size: 11px; font-weight: 700; letter-spacing: .19em; margin: 0 0 24px; }
+.eyebrow-line { display: inline-block; width: 27px; height: 2px; margin: 0 10px 3px 0; background: #27a0df; }
+.course-category { color: #7a8fa2; font-size: 11px; font-weight: 700; letter-spacing: .16em; margin: 0 0 13px; }
+h1, h2 { font-family: "Manrope", sans-serif; }
+h1 { max-width: 720px; margin: 0; color: var(--blue-dark); font-size: clamp(42px, 5.1vw, 76px); line-height: 1.04; letter-spacing: -.055em; font-weight: 800; }
+.course-subtitle { max-width: 620px; margin: 24px 0 14px; color: #294c69; font: 600 clamp(17px, 1.5vw, 21px)/1.5 "Manrope", sans-serif; }
+.course-description { max-width: 600px; color: var(--muted); font-size: 15px; line-height: 1.8; margin: 0; }
+.course-facts { display: flex; flex-wrap: wrap; gap: 27px; margin: 34px 0 35px; }
+.fact { display: flex; align-items: center; gap: 11px; }
+.fact-icon { width: 39px; height: 39px; display: grid; place-items: center; color: var(--blue); background: #e4f1fb; border-radius: 12px; font-size: 20px; }
+.fact span:last-child { display: flex; flex-direction: column; gap: 4px; }
+.fact small { color: #8294a5; font-size: 9px; font-weight: 700; letter-spacing: .12em; }
+.fact strong { color: #29465f; font-size: 12px; font-weight: 700; }
+.course-actions { display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+.primary-button {
+  border: 0; border-radius: 7px; padding: 16px 23px; min-height: 54px;
+  color: white; background: var(--blue); cursor: pointer; font-weight: 700;
+  box-shadow: 0 10px 24px rgba(7,87,155,.18); transition: transform .2s, background .2s, box-shadow .2s;
+}
+.primary-button span { margin-left: 25px; font-size: 19px; }
+.primary-button:hover { background: #06477f; transform: translateY(-2px); box-shadow: 0 13px 28px rgba(7,87,155,.24); }
+.primary-button:focus-visible, .back-button:focus-visible, .modal-close:focus-visible { outline: 3px solid #65b9ec; outline-offset: 4px; }
+.action-hint { max-width: 180px; margin: 0; color: #8292a1; font-size: 11px; line-height: 1.5; }
+
+.visual-panel { min-height: 475px; position: relative; display: flex; align-items: center; justify-content: center; }
+.visual-glow { position: absolute; width: 88%; height: 85%; border-radius: 50%; background: #cce6f8; filter: blur(55px); opacity: .75; }
+.visual-image {
+  width: 100%; height: clamp(390px, 39vw, 530px); position: relative; z-index: 1;
+  border-radius: 13px 13px 13px 70px; overflow: hidden;
+  background: linear-gradient(135deg, #0b4778, #1684bf);
+  background-position: center; background-size: cover;
+  box-shadow: 0 28px 65px rgba(16,64,101,.2);
+}
+.image-overlay { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(5,38,68,.04) 30%, rgba(4,34,61,.7) 100%); }
+.image-caption { position: absolute; bottom: 30px; left: 31px; display: flex; align-items: center; gap: 12px; color: white; font-size: 10px; font-weight: 700; letter-spacing: .16em; }
+.caption-line { width: 27px; height: 2px; background: #64c5f2; }
+.floating-card {
+  position: absolute; z-index: 2; left: -36px; bottom: 49px; display: flex; align-items: center; gap: 13px;
+  padding: 17px 21px; border: 1px solid rgba(255,255,255,.8); border-radius: 9px;
+  background: rgba(255,255,255,.94); box-shadow: 0 14px 35px rgba(14,55,87,.13); backdrop-filter: blur(10px);
+}
+.floating-icon { width: 36px; height: 36px; display: grid; place-items: center; border-radius: 10px; background: var(--blue-light); color: var(--blue); font-size: 22px; }
+.floating-card span:last-child { display: flex; flex-direction: column; gap: 4px; }
+.floating-card small { color: #8b9baa; font-size: 8px; font-weight: 700; letter-spacing: .13em; }
+.floating-card strong { color: var(--blue-dark); font-size: 10px; letter-spacing: .04em; }
+.visual-index { position: absolute; right: -22px; top: 50%; z-index: 2; writing-mode: vertical-rl; color: var(--blue); font: 700 12px "Manrope"; letter-spacing: .12em; }
+.visual-index span { color: #9ab0c2; margin: 7px 0; }
+
+.learning-section { padding: 25px 0 55px; border-top: 1px solid rgba(7,87,155,.12); }
+.section-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: 22px; }
+.section-heading .eyebrow { margin: 0; }
+.section-heading h2 { margin: 0; color: var(--blue-dark); font-size: clamp(19px, 2vw, 27px); letter-spacing: -.03em; }
+.learning-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; }
+.learning-item { padding: 18px 20px; border: 1px solid rgba(7,87,155,.1); border-radius: 8px; background: rgba(255,255,255,.68); }
+.learning-item span { display: block; margin-bottom: 12px; color: #2a9bd5; font: 700 11px "Manrope"; }
+.learning-item strong { color: #244661; font: 700 13px "Manrope"; }
+.learning-item p { margin: 7px 0 0; color: #778b9c; font-size: 11px; line-height: 1.6; }
+.footer { min-height: 67px; margin-top: auto; border-top: 1px solid rgba(7,87,155,.12); display: flex; align-items: center; justify-content: space-between; gap: 15px; color: #8294a4; font-size: 9px; font-weight: 700; letter-spacing: .12em; }
+.footer-center { color: #9babb8; }
+.back-button { padding: 10px 0 10px 12px; border: 0; background: transparent; color: var(--blue); font-size: 9px; font-weight: 700; letter-spacing: .1em; cursor: pointer; }
+.back-button span { margin-left: 8px; font-size: 16px; }
+
+.modal-backdrop { position: fixed; inset: 0; z-index: 10; display: grid; place-items: center; padding: 20px; background: rgba(5,28,49,.55); backdrop-filter: blur(8px); }
+.modal-backdrop[hidden] { display: none; }
+.interest-modal { width: min(100%, 460px); position: relative; padding: 42px; border-radius: 15px; background: white; text-align: center; box-shadow: 0 25px 80px rgba(0,0,0,.25); }
+.modal-close { position: absolute; top: 13px; right: 17px; border: 0; background: transparent; color: #7890a2; font-size: 27px; cursor: pointer; }
+.modal-symbol { width: 52px; height: 52px; display: grid; place-items: center; margin: 0 auto 20px; border-radius: 50%; color: #fff; background: #24a477; font-size: 25px; }
+.interest-modal .eyebrow { margin-bottom: 10px; }
+.interest-modal h2 { margin: 0 0 12px; color: var(--blue-dark); font-size: 25px; line-height: 1.2; }
+.interest-modal p:not(.eyebrow) { color: var(--muted); font-size: 14px; line-height: 1.7; }
+.modal-ok { width: 100%; margin-top: 12px; }
+
+@media (min-width: 1500px) {
+  .course-layout { min-height: 690px; }
+  .learning-section { padding-bottom: 65px; }
+  .course-description { font-size: 17px; }
+}
+@media (max-width: 900px) {
+  .course-layout { grid-template-columns: 1fr; gap: 35px; padding-top: 50px; }
+  .course-copy { max-width: 100%; }
+  .visual-panel { min-height: 390px; }
+  .visual-image { height: 420px; }
+  .learning-grid { grid-template-columns: 1fr; }
+  .section-heading { align-items: flex-start; flex-direction: column; }
+  .footer-center { display: none; }
+}
+@media (max-width: 560px) {
+  .experience-shell { padding: 0 22px; }
+  .topbar { height: 78px; }
+  .topbar-tag { font-size: 8px; letter-spacing: .08em; }
+  .brand-mark { width: 38px; height: 38px; font-size: 23px; }
+  .brand-copy strong { font-size: 17px; }
+  h1 { font-size: 42px; }
+  .course-facts { gap: 17px; }
+  .visual-panel { min-height: 310px; }
+  .visual-image { height: 330px; }
+  .floating-card { left: -8px; bottom: 23px; padding: 12px; }
+  .visual-index { right: -13px; }
+  .footer { min-height: 62px; font-size: 8px; }
+  .interest-modal { padding: 35px 24px; }
+}
+
+
+/* BOTÃO NÃO TENHO INTERESSE */
+
+.no-interest-button {
+  min-height: 54px;
+  padding: 16px 23px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  background: #e5e7eb;
+  color: #4b5563;
+  cursor: pointer;
+  font-weight: 700;
+  transition: .2s ease;
+}
+
+.no-interest-button span {
+  margin-left: 12px;
+  font-size: 18px;
+}
+
+.no-interest-button:hover {
+  background: #d1d5db;
+  border-color: #9ca3af;
+  color: #374151;
+  transform: translateY(-2px);
+}
+
+.no-interest-button:focus-visible {
+  outline: 3px solid #9ca3af;
+  outline-offset: 4px;
+}

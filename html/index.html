@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#07579b">
+
+    <title>SENAC Experience VR | Desenvolvimento de Sistemas</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main class="experience-shell">
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="SENAC Experience VR">
+        <span class="brand-mark">S</span>
+        <span class="brand-copy"><strong>SENAC</strong><small>EXPERIENCE VR</small></span>
+      </a>
+      <div class="topbar-tag"><span class="live-dot"></span> EXPERIÊNCIA IMERSIVA</div>
+    </header>
+
+    <section class="course-layout" aria-live="polite">
+        <div class="course-copy">
+
+            <p class="eyebrow">
+                <span class="eyebrow-line"></span>
+                DESCUBRA SEU PROXIMO PASSO
+            </p>
+
+            <p class="course-category">
+                FORMAÇÃO PROFISSIONAL
+            </p>
+
+            <h1 id="course-title">
+                Desenvolvimento de Sistemas
+            </h1>
+
+            <p class="course-subtitle">
+                Transforme ideias em soluções digitais e construa seu futuro na tecnologia.
+            </p>
+
+            <p class="course-description">
+                Conheça o universo do desenvolvimento de sistemas,
+                aprenda como aplicações são construidas e descubra
+                como a programação pode transforma ideias em soluções
+                para o mundo real. 
+
+            </p>
+
+            <div class="course-facts">
+
+                <div class="fact">
+                    <span class="fact-icon">⌖</span>
+                    <span>
+                        <small>MODALIDADE</small>
+                        <strong>A definir</strong>
+                    </span>
+                </div>
+
+                <div class="fact">
+                    <span class="fact-icon">✦</span>
+                    <span>
+                        <small>ÁREA</small>
+                        <strong>Tecnologia</strong>
+                    </span>
+                </div>
+
+            </div>
+
+            <div class="course-actions choice-buttons">
+                <button class="primary-button interest-button"
+                id="interest-button"
+                type="button">
+                Tenho interesse
+                <span aria-hidden="true">✓</span>   
+                    
+                </button>
+
+                <button
+                class="no-interest-button"
+                id="no-interest-button"
+                type="button">
+                Não tenho interesse
+                <span aria-hidden="true">×</span>
+
+                </button>
+            </div>
+
+            <p 
+            class="choice-feedback"
+            id="choice-feedback"
+            aria-live="polite"> 
+        </p>
+
+        </div>
+
+        <div class="visual-panel">
+
+            <div class="visual-glow"></div>
+
+            <div
+            class="visual-image"
+            id="visual-image"
+            role="img"
+            aria-label="Ambiente de desenvolvimento de sistemas">
+
+            <div class="image-overlay"></div>
+
+            <div class="image-caption">
+                <span class="caption-line"></span>
+                <span>TECNOLOGIA • PROGRAMAÇÃO • INOVAÇÃO</span>
+
+            </div>
+
+            </div>
+
+            <div class="floating-card">
+                <span class="floating-icon">✧</span>
+
+                <span>
+                    <small>SEU FUTURO COMEÇA</small>
+                    <strong>COM UMA EXPERIENCIA</strong>
+                </span>
+
+
+            </div>
+
+            <div class="visual-index">
+                01 <span>/</span> 01
+
+            </div>
+
+        </div>
+
+    </section>
+            
+
+    <section class="learning-section">
+
+    <div class="section-heading">
+        <p class="eyebrow">
+            SUA JORNADA DE APRENDIZADO
+        </p>
+
+        <h2>O que você poderá desenvolver</h2>
+    </div>
+
+    <div class="learning-grid">
+
+        <article class="learning-item">
+            <span>01</span>
+            <strong>Lógica de programação</strong>
+            <p>
+                Desenvolva o raciocínio lógico para solucionar
+                problemas utilizando programação.
+            </p>
+        </article>
+
+        <article class="learning-item">
+            <span>02</span>
+            <strong>Desenvolvimento de aplicações</strong>
+            <p>
+                Conheça os processos de criação e desenvolvimento
+                de sistemas e aplicações.
+            </p>
+        </article>
+
+        <article class="learning-item">
+            <span>03</span>
+            <strong>Banco de dados</strong>
+            <p>
+                Descubra como informações são armazenadas,
+                organizadas e utilizadas pelos sistemas.
+            </p>
+        </article>
+
+    </div>
+
+</section>
+
+    <footer class="footer">
+      <span>© SENAC EXPERIENCE VR</span>
+      <span class="footer-center">EXPLORE • DESCUBRA • CONSTRUA SEU FUTURO</span>
+      <button class="back-button" id="back-button" type="button">VOLTAR À EXPERIÊNCIA <span>←</span></button>
+    </footer>
+  </main>
+
+  <div class="modal-backdrop" id="interest-modal" hidden>
+    <section class="interest-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" type="button" aria-label="Fechar">×</button>
+      <div class="modal-symbol">✓</div>
+      <p class="eyebrow">SENAC EXPERIENCE VR</p>
+      <h2 id="modal-title">Que bom que você se interessou!</h2>
+      <p id="modal-message">Você demonstrou interesse neste curso. Em uma próxima etapa, poderemos encaminhar esse registro para a equipe do SENAC.</p>
+      <button class="primary-button modal-ok" id="modal-ok" type="button">Continuar</button>
+    </section>
+  </div>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>
