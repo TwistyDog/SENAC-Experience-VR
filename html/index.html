@@ -189,15 +189,115 @@
   </main>
 
   <div class="modal-backdrop" id="interest-modal" hidden>
-    <section class="interest-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
-      <button class="modal-close" id="modal-close" type="button" aria-label="Fechar">×</button>
-      <div class="modal-symbol">✓</div>
-      <p class="eyebrow">SENAC EXPERIENCE VR</p>
-      <h2 id="modal-title">Que bom que você se interessou!</h2>
-      <p id="modal-message">Você demonstrou interesse neste curso. Em uma próxima etapa, poderemos encaminhar esse registro para a equipe do SENAC.</p>
-      <button class="primary-button modal-ok" id="modal-ok" type="button">Continuar</button>
+    <section class="interest-modal"
+        role="dialog"
+        aria-modal="true"
+        aria-labellebdy="modal-tile">
+
+        <button
+        class="modal-close"
+        id="modal-close"
+        type="button"
+        aria-label="Fechar">
+        ×
+
+        </button>
+
+        <div class="modal-symbol">✓</div>
+
+        <p class="eyebrow">SENAC EXPERIENCE VR</p>
+
+        <h2 id="modal-title">
+
+            Que bom que você se interessou!!!
+
+        </h2>
+
+        <p class="modal-description">
+            Informe seus dados para que a nossa equipe possa
+            entrar em contato com você sobre este curso.
+        </p>
+
+
+        <form id="interest-form">
+            <div class="form-group">
+                <label for="visitor-name">Nome completo</label>
+
+                <input
+                type="text"
+                id="visitor-name"
+                name="nome"
+                placeholder="Digite seu nome completo"
+                autocomplete="name"
+                required
+                minlength="3">
+            </div>
+
+            <div class="form-group">
+                <label for="visitor-phone">Telefone para contato</label>
+
+                <input
+                type="tel"
+                id="visitor-phone"
+                name="telefone"
+                placeholder="(00) 00000-0000"
+                autocomplete="tel"
+                required>
+            </div>
+
+            <div class="form-group">
+                <label for="visitor-email"> Email para contato</label>
+
+                <input
+                type="email"
+                id="visitor-email"
+                name="email"
+                placeholder="Digite seu email"
+                autocomplete="email"
+                required>
+            </div>
+
+            <label class="consent-group">
+                <input
+                type="checkbox"
+                id="visitor-consent"
+                required>
+
+                <span>
+                    Autorizo o uso dos meus dados para contato
+                    referente ao curso selecionado, conforme
+                    a política de privacidade do SENAC.
+                </span>
+            </label>
+
+            <button
+            class="primary-button modal-ok"
+            type="submit">
+
+            Enviar meus dados
+            <span></span>
+
+            </button>
+        </form>
+
+        <div id="form-success">
+            <div class="modal-symbol success-symbol">✓</div>
+
+            <h2>Cadastro realizado com sucesso</h2>
+
+            <p>
+                Seus dados foram preparados com sucesso.
+                Obrigado pelo interesse em Desenvolvimento de Sistemas!
+            </p>
+
+            <button
+            class="primary-button modal-ok"
+            id="success-close"
+            type="button">
+            Continuar
+        </button>
+        </div>
     </section>
-  </div>
 
   <script src="../js/script.js"></script>
 </body>

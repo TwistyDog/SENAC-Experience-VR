@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#07579b">
+
+    <title>Programa de Aprendizagem | SENAC EXPERIENCE VR</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <main class="experience-shell">
+        <header class="topbar">
+            
+            <a class="brand" href="#">
+                <span class="brand-mark">S</span>
+                
+                <span class="brand-copy">
+                    <strong>SENAC</strong>
+                    <small>EXPERIENCE VR</small>
+                </span>
+            </a>
+            
+            <div class="topbar-tag">
+                <span class="live-dot"></span>
+                SUA JORNADA NA TECNOLOGIA
+            </div>
+
+        </header>
+
+        <section class="program-hero">
+            <p class="eyebrow">
+                <span class="eyebrow-line"></span>
+                CONHEÇA SUA FORMAÇÃO
+            </p>
+
+            <h1>
+                O que você vai aprender em Desenvolvimento de Sistemas?
+            </h1>
+
+            <p>
+                Durante o curso, você desenvolverá conhecimentos e 
+                habilidades para participar de todas as etapas da
+                criação de sistemas e aplicações computacionais.
+            </p>
+
+            <div class="program-highlight">
+                <span>9</span>
+                <div>
+                    <strong>Áreas de aprendizagem</strong>
+                    <small>Conhecimentos e praticas profissionais</small>
+                </div>
+            </div>
+        </section>
+
+        <section class="program-section">
+            <div class="section-heading">
+                <p class="eyebrow">SUA FORMAÇÃO PROFISSIONAL</p>
+                <h2>O que você desenvolverá durante o curso</h2>
+            </div>
+
+            <div class="program-grid">
+                <article class="program-item">
+                    <span>01</span>
+                    <h3>Levantamento de requisitos</h3>
+                    <p>
+                        Apoiar no levantamento de requisitos e 
+                        funcionalidade da aplicação, identificando
+                        necessidades e características dos sistemas.
+                    </p>
+                </article>
+
+                <article class="program-item">
+                    <span>02</span>
+                    <h3>Gestão de projetos de TI</h3>
+                    <p>
+                        Auxiliar na gestão de projetos de Tecnologia
+                        da Informação, acompanhando atividades e
+                        processos de desenvolvimento.
+                    </p>
+                </article>
+
+                <article class="program-item">
+                    <span>03</span>
+                    <h3>Programação orientada a objetos</h3>
+                    <p>
+                        Desenvolver aplicações utilizando os conceitos
+                        de programação orientada a objetos (POO).
+                    </p>
+                </article>
+
+                <article class="program-item">
+                    <span>04</span>
+                    <h3>Desing de interação e UI/UX</h3>
+                    <p>
+                        Elaborar desing de interação para aplicações
+                        multiplataforma, considerando a experiência
+                        e a usabilidade dos usuários.
+                    </p>
+                </article>
+
+                <article class="program-item">
+                    <span>05</span>
+                    <h3>Desenvolvimento Front-End</h3>
+                    <p>
+                        Desenvolver e organizar interfaces de usuário
+                        e elementos visuais para aplicações web.
+                    </p>
+                </article>
+
+                <article class="program-item">
+                    <span>06</span>
+                    <h3>Desenvolvimento Back-End</h3>
+                    <p>
+                        Programar aplicativos computacionais com
+                        integração de banco de dados para web.
+                    </p>
+                </article>
+
+                <article class="program-item">
+                    <span>07</span>
+                    <h3>Testes de Aplicações</h3>
+                    <p>
+                        Planejar e executar testes nas aplicações
+                        desenvolvidas, verificando seu funcionamento.
+                    </p>
+                </article>
+
+                <article class="program-item">
+                    <span>08</span>
+                    <h3>Manutenção de sistemas</h3>
+                    <p>
+                        Realizar atualizações e manutenção nas
+                        aplicações desenvolvidas.
+                    </p>
+                </article>
+
+                <article class="program-item">
+                    <span>09</span>
+                    <h3>Suporte ao usuário</h3>
+                    <p>
+                        Realizar operações de suporte junto ao usuário,
+                        auxiliando na utilização das aplicações.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+
+        <section class="integrator-section">
+            <p class="eyebrow">COLOCANDO O CONHECIMENTO EM PRÁTICA</p>
+            
+            <h2>Projeto Integrador Técnico de Desenvolvimento de Sistemas</h2>
+
+            <p>
+                O Projeto Integrador representa a oportunidade de 
+                reunir os conhecimentos desenvolvidos durante a formação 
+                em uma proposta prática de desenvolvimento de sistemas.
+            </p>
+
+            <div class="integrator-decoration">
+                <span>IDEIA</span>
+                <span>+</span>
+                <span>TECNOLOGIA</span>
+                <span>+</span>
+                <span>DESENVOLVIMENTO</span>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <span>© SENAC EXPERIENCE VR</span>
+
+            <span class="footer-center">
+                EXPLORE • APRENDA • DESENVOLVA
+            </span>
+
+            <button class="back-button"
+            id="finish-button"
+            type="button">
+            FINALIZAR EXPERIÊNCIA →
+
+        </button>
+
+        </footer>
+
+        <script>
+            document.querySelector("#finish-button")
+                .addEventListener("click", () =>{
+                    window.dispatchEvent(
+                        new CustomEvent("senac:finalizar-experiencia")
+                    );
+
+                    window.location.href = "index.html";
+                })
+        </script>
+    </main>
+    
+</body>
+</html>
